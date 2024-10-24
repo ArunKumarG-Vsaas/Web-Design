@@ -1,0 +1,244 @@
+:root{
+    --text-primary-color: black;
+    --text-secondary-color: #5d5d5d;
+    --font-family-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+div.header {
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 15px 5px;
+    z-index: 10;
+}
+
+.align-horizontal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.title{
+    font-family: var(--font-family-primary);
+    color: var(--text-secondary-color);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn{
+    padding: 4px;
+    padding-inline-start: 12px;
+    padding-inline-end: 12px;
+    border-radius: 25px;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.log-in{
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.sign-up{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: white;
+    color: var(--text-primary-color);
+    margin-right: 25px;
+}
+
+/* .chat-div{
+    height: 400px;
+} */
+
+.search-div{
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    width: 100vw;
+    bottom: 25px;    
+    z-index: 10;
+}
+
+.search-bar{
+    width: 75vw;
+    height: 35px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 25px;
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    padding: 5px;
+    display: flex;
+}
+
+.search-input{
+    width: 95%;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display:  flex;
+    align-items: center;
+    padding-left: 10px;
+    /* padding: 2px; */
+}
+
+.search-input > input {
+    width: inherit;
+    padding: 5px;
+    border-radius: inherit;
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+}
+
+.search-input > input:focus{
+    outline: none;
+}
+
+.enter-btn{
+    width: 5%;
+    height: 100%;
+    background-color: black;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.disable{
+    opacity: 0.2;
+    cursor: auto;
+}
+
+.enter-btn{
+    color: white;
+}
+
+.footer{
+    position: fixed;
+    bottom: 5px;
+    width: 100vw;
+    text-align: center;
+    color: var(--text-secondary-color);
+    font-family: var(--font-family-primary);
+    font-size: 14px;    
+    background-color: white;
+}
+
+.chat-div{
+    /* width: 100vw; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
+    height: 400px;
+    overflow-y: scroll;
+
+    scroll-behavior: smooth;
+}
+
+/* Webkit scrollbar styles */
+.chat-div::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.chat-div::-webkit-scrollbar-track {
+    background: #7d7878; /* Background of the scrollbar track */
+    border-radius: 20px;
+}
+
+.chat-div::-webkit-scrollbar-thumb {
+    background: #f3efef; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.chat-div::-webkit-scrollbar-thumb:hover {
+    background: #dc8f8f; /* Color of the thumb on hover */
+}
+.chat{
+    width: 75%;
+    /* height: 1000px; */
+    /* background-color: red; */
+    
+}
+
+.jus-end{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.question{
+    /* min-width: 200px; */
+    /* width: fit-content; */
+    max-width: 500px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(227, 227, 227);
+    padding: 10px;
+    border-radius: 20px;
+    font-family: var(--font-family-primary);
+    font-size: medium;
+    margin-top: 15px;
+
+}
+
+.answer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-top: 40px;
+
+    font-family: var(--font-family-primary);
+    font-size: medium;
+
+}
+
+
+/* Media query  */
+@media screen and (max-width: 240px){
+    .sign-up, .log-in{
+        display: none;
+    }
+
+  
+    
+}
+@media screen and (min-width: 240px) and (max-width: 330px) {
+    
+    .sign-up{
+        display: none;
+    }
+
+    .log-in{
+        margin-right: 25px;
+    }
+
+}
+
+@media screen and (min-width: 340px) and (max-width: 800px) {
+    .chat-div{
+        height: 870px;
+    }
+}
