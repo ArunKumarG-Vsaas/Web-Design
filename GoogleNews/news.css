@@ -1,0 +1,84 @@
+.main{
+    width: 70%;   
+    min-width: 715px;
+    padding-left: 50px;
+}
+
+
+.news{
+    /* background-color: red; */
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.news:hover .title{
+    text-decoration: underline;
+}
+
+.news .left {
+    padding: 5px;
+}
+
+.news .left .from{
+    display: flex;
+    column-gap: 5px;
+    font-size: 12px;
+    color: rgba(20, 20, 20, 0.831);
+}
+
+.left .from .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.news .left .from div{
+    max-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.left .title {
+    padding-top: 5px;
+    font-size: 20px;   
+    color: rgb(74, 7, 136);
+}
+
+
+
+.left .text {
+    display: -webkit-box; /* For WebKit browsers */
+    -webkit-box-orient: vertical; /* For WebKit browsers */
+    -webkit-line-clamp: 2; /* Limit text to 3 lines */
+    overflow: hidden; /* Hide the overflow */
+    text-overflow: ellipsis; /* Show ellipsis (…) when the text overflows */
+    padding-top: 5px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.986);
+    line-height: 17px;
+}
+
+.left .date{
+    font-size: 14px;
+    color: rgba(20, 20, 20, 0.89);
+    padding-top: 5px;
+}
+
+.news .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news .right .news-img {
+    width: 90%;
+
+}
+
+.news .right .news-img img {
+    width: 100%;
+    border-radius: 5px;
+}
