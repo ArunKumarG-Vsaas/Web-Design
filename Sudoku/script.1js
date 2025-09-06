@@ -1,0 +1,75 @@
+// A valid 4x4 Sudoku solution
+const fullSolution = [
+  [1, 2, 3, 4],
+  [3, 4, 1, 2],
+  [4, 1, 2, 3],
+  [2, 3, 4, 1]
+];
+
+// We'll remove one number per row (replace with 0)
+const puzzle = fullSolution.map(row => {
+  const newRow = [...row];
+  const indexToRemove = Math.floor(Math.random() * 4);
+  newRow[indexToRemove] = 0;
+  return newRow;
+});
+
+function renderGrid() {
+  const grid = document.getElementById("sudokuGrid");
+  grid.innerHTML = '';
+
+  puzzle.forEach((row, rowIndex) => {
+    row.forEach((num, colIndex) => {
+      const cell = document.createElement("input");
+      cell.classList.add("cell");
+
+      if (num === 0) {
+        cell.type = "number";
+        cell.min = 1;
+        cell.max = 4;
+        cell.dataset.row = rowIndex;
+        cell.dataset.col = colIndex;
+      } else {
+        cell.type = "text";
+        cell.value = num;
+        cell.disabled = true;
+      }
+
+      grid.appendChild(cell);
+    });
+  });
+}
+
+function checkAnswers() {
+  const inputs = document.querySelectorAll("input.cell:not([disabled])");
+
+  // Fill user answers into a copy of puzzle
+  const userGrid = puzzle.map(row => [...row]);
+
+  inputs.forEach(input => {
+    const row = parseInt(input.dataset.row);
+    const col = parseInt(input.dataset.col);
+    const val = parseInt(input.value);
+
+    userGrid[row][col] = val;
+  });
+
+  const result = document.getElementById("result");
+
+  // Validate: rows and columns should contain numbers 1-4 with no repeats
+  for (let i = 0; i < 4; i++) {
+    const rowSet = new Set(userGrid[i]);
+    const colSet = new Set(userGrid.map(row => row[i]));
+
+    if (rowSet.size !== 4 || colSet.size !== 4 || [...rowSet].some(n => n < 1 || n > 4) || [...colSet].some(n => n < 1 || n > 4)) {
+      result.textContent = "❌ Incorrect. Make sure each row and column contains 1–4 with no duplicates.";
+      result.style.color = "red";
+      return;
+    }
+  }
+
+  result.textContent = "✅ Correct! Great job.";
+  result.style.color = "green";
+}
+
+renderGrid();

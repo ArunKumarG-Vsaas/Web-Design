@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #333;
+}
+
+input.cell {
+  background-color: #eef;
+}
+
+input.cell:focus {
+  outline: 2px solid #007bff;
+}

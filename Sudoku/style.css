@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 60px); /* Bigger cells */
+  grid-gap: 0; /* No gaps so borders align */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  background-color: #eef;
+}
+
+/* Add thick borders to define 2x3 boxes */
+.cell.thick-top {
+  border-top: 4px solid black;
+}
+.cell.thick-left {
+  border-left: 4px solid black;
+}
+.cell.thick-bottom {
+  border-bottom: 4px solid black;
+}
+.cell.thick-right {
+  border-right: 4px solid black;
+}
+
+/* Disabled = prefilled */
+.cell:disabled {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+/* Focus effect */
+.cell:focus {
+  outline: 2px solid #007bff;
+}
+
+/* Invalid entries highlighted */
+.invalid {
+  background-color: #ffdddd !important;
+}

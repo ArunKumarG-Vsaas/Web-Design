@@ -1,0 +1,96 @@
+#box{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    font-size: 13rem;
+    text-align: center;
+    /* Setting animation */
+    animation-name: slideDown;
+    /* Setting the duration */
+    animation-duration: 3s;
+    /* Seting animation count */
+    animation-iteration-count: infinite;
+    /* Setting direction */
+    animation-direction: reverse;
+    /* Setting state */
+    animation-play-state: running;
+    /* Setting timing */
+    animation-timing-function: steps(2);
+}
+
+/* #box:hover{
+    animation-name: glow;
+    animation-duration: 3s;
+} */
+
+/* Animation needs to be created using @kyeframes animation name */
+
+/* Slide Left */
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+}
+
+/* Slide Right */
+@keyframes slideRight {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Slide up */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+/* Rotate */
+@keyframes rotate {
+    20% {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Grow scale(width%,height%) */
+@keyframes grow {
+    50% {
+        transform: scale(2,2);
+    }
+}
+
+/* Shrink */
+@keyframes shrink {
+    50% {
+        transform: scale(0.5,0.5);
+    }
+}
+
+/* Fade */
+@keyframes fade {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Changing Colour */
+@keyframes changeColour {
+    0% { background-color: white; }
+    25% { background-color: blue; }
+    50% { background-color: yellow; }
+    75% { background-color: orange; }
+    100% { background-color: black; }
+}
+
+/* Glow */
+@keyframes glow {
+    50% { box-shadow: 0px 0px 50px yellow; }
+}
