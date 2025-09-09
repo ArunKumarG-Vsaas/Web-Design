@@ -154,7 +154,7 @@ function checkAnswers() {
     }
   }
 
-  isValid = true
+  // isValid = true
   if (isValid) {
     result.textContent = "✅ Correct! Well done.";
     result.style.color = "green";
@@ -248,11 +248,11 @@ function showClue(){
       color: #333;
     }
 
-    .highlight {
-      background-color: #ffd54f;
-      border-color: #fbc02d;
-      color: #000;
-    }
+    // .highlight {
+    //   background-color: #ffd54f;
+    //   border-color: #fbc02d;
+    //   color: #000;
+    // }
 
     @media (max-width: 400px) {
       .puzzle {
