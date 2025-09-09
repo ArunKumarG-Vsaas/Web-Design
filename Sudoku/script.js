@@ -194,9 +194,8 @@ renderGrid();
 
 function showClue(){
   document.querySelector('html').innerHTML = `
-  <head>
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Treasure Puzzle</title>
   <style>
     body {
@@ -208,27 +207,37 @@ function showClue(){
       justify-content: center;
       min-height: 100vh;
       margin: 0;
+      padding: 20px;
     }
 
-    h1 {
-      font-size: 24px;
+    .puzzle {
+      background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+      background-color: #fff8dc;
+      border: 3px solid black;
+      padding: 30px;
+      max-width: 100%;
+      width: 500px;
       text-align: center;
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-family: 'Courier New', Courier, monospace;
+      color: black;
+      font-size: 20px;
       margin-bottom: 20px;
-      max-width: 600px;
-      padding: 0 20px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(8, 50px);
-      grid-template-rows: repeat(8, 50px);
-      /* gap: 5px; */
+      grid-template-columns: repeat(8, 1fr);
+      gap: 5px;
       justify-content: center;
     }
 
     .cell {
-      width: 40px;
-      height: 40px;
+      aspect-ratio: 1 / 1;
       background-color: #ffffff;
       border: 2px solid #ccc;
       display: flex;
@@ -239,63 +248,53 @@ function showClue(){
       color: #333;
     }
 
-    // .highlight {
-    //   background-color: #ffd54f;
-    //   border-color: #fbc02d;
-    //   color: #000;
-    // }
-
-    .puzzle{
-        background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
-   background-color: #fff8dc;
-      border: 3px solid black;
-      padding: 30px;
-      width: 500px;
-      position: relative;
-      text-align: center;
-     
-      border-radius: 12px;
-      overflow: hidden;
+    .highlight {
+      background-color: #ffd54f;
+      border-color: #fbc02d;
+      color: #000;
     }
 
-    h2{
-      font-family: 'Courier New', Courier, monospace;
-      color: black;
-      font-size: 20px;
+    @media (max-width: 400px) {
+      .puzzle {
+        padding: 20px;
+        width: 100%;
+      }
+      .cell {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
- <div class="puzzle">
-    <div>
-         <h2>
-    🔍 Within this mysterious grid lies the name of the one who holds the prize.  
-    Find them, ask them, and the treasure shall be yours.  
-    Can you uncover the hidden name?
-  </h2>
-    </div>
+  <div class="puzzle">
+    <h2>
+      🔍 Within this mysterious grid lies the name of the one who holds the prize.<br>
+      Find them, ask them, and the treasure shall be yours.<br>
+      Can you uncover the hidden name?
+    </h2>
 
-  <div class="grid">
-    <!-- Row 1 -->
-    <div class="cell">F</div><div class="cell">L</div><div class="cell">G</div><div class="cell">V</div><div class="cell">C</div><div class="cell">S</div><div class="cell">Q</div><div class="cell">N</div>
-    <!-- Row 2 -->
-    <div class="cell">B</div><div class="cell">Z</div><div class="cell highlight">A</div><div class="cell">D</div><div class="cell">U</div><div class="cell">M</div><div class="cell">E</div><div class="cell">Y</div>
-    <!-- Row 3 -->
-    <div class="cell">T</div><div class="cell">P</div><div class="cell highlight">S</div><div class="cell">E</div><div class="cell">O</div><div class="cell">X</div><div class="cell">C</div><div class="cell">L</div>
-    <!-- Row 4 -->
-    <div class="cell">N</div><div class="cell">R</div><div class="cell highlight">K</div><div class="cell highlight">F</div><div class="cell">T</div><div class="cell">N</div><div class="cell">W</div><div class="cell">H</div>
-    <!-- Row 5 -->
-    <div class="cell">I</div><div class="cell">Q</div><div class="cell">J</div><div class="cell highlight">A</div><div class="cell">Z</div><div class="cell">B</div><div class="cell">K</div><div class="cell">G</div>
-    <!-- Row 6 -->
-    <div class="cell">V</div><div class="cell">A</div><div class="cell">J</div><div class="cell highlight">I</div><div class="cell highlight">R</div><div class="cell">T</div><div class="cell">C</div><div class="cell">B</div>
-    <!-- Row 7 -->
-    <div class="cell">U</div><div class="cell">F</div><div class="cell">T</div><div class="cell">U</div><div class="cell highlight">I</div><div class="cell">D</div><div class="cell">U</div><div class="cell">O</div>
-    <!-- Row 8 -->
-    <div class="cell">E</div><div class="cell">M</div><div class="cell">D</div><div class="cell">W</div><div class="cell highlight">N</div><div class="cell">Y</div><div class="cell">S</div><div class="cell">R</div>
+    <div class="grid">
+      <!-- Row 1 -->
+      <div class="cell">F</div><div class="cell">L</div><div class="cell">G</div><div class="cell">V</div><div class="cell">C</div><div class="cell">S</div><div class="cell">Q</div><div class="cell">N</div>
+      <!-- Row 2 -->
+      <div class="cell">B</div><div class="cell">Z</div><div class="cell highlight">A</div><div class="cell">D</div><div class="cell">U</div><div class="cell">M</div><div class="cell">E</div><div class="cell">Y</div>
+      <!-- Row 3 -->
+      <div class="cell">T</div><div class="cell">P</div><div class="cell highlight">S</div><div class="cell">E</div><div class="cell">O</div><div class="cell">X</div><div class="cell">C</div><div class="cell">L</div>
+      <!-- Row 4 -->
+      <div class="cell">N</div><div class="cell">R</div><div class="cell highlight">K</div><div class="cell highlight">F</div><div class="cell">T</div><div class="cell">N</div><div class="cell">W</div><div class="cell">H</div>
+      <!-- Row 5 -->
+      <div class="cell">I</div><div class="cell">Q</div><div class="cell">J</div><div class="cell highlight">A</div><div class="cell">Z</div><div class="cell">B</div><div class="cell">K</div><div class="cell">G</div>
+      <!-- Row 6 -->
+      <div class="cell">V</div><div class="cell">A</div><div class="cell">J</div><div class="cell highlight">I</div><div class="cell highlight">R</div><div class="cell">T</div><div class="cell">C</div><div class="cell">B</div>
+      <!-- Row 7 -->
+      <div class="cell">U</div><div class="cell">F</div><div class="cell">T</div><div class="cell">U</div><div class="cell highlight">I</div><div class="cell">D</div><div class="cell">U</div><div class="cell">O</div>
+      <!-- Row 8 -->
+      <div class="cell">E</div><div class="cell">M</div><div class="cell">D</div><div class="cell">W</div><div class="cell highlight">N</div><div class="cell">Y</div><div class="cell">S</div><div class="cell">R</div>
+    </div>
   </div>
- </div>
 
 </body>
+</head>
   `
 }
