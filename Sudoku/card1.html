@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treasure Hunt Clue</title>
+  <style>
+    body {
+      background-color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 80px;
+      column-gap: 40px;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .clue-card {
+      /* background: url('https://www.transparenttextures.com/patterns/old-mathematics.png'); */
+      background-color: white;
+      border: 3px solid black;
+      padding: 30px;
+      width: 250px;
+      position: relative;
+      text-align: center;
+     
+      border-radius: 12px;
+      overflow: hidden;
+      max-height: 400px;
+    }
+
+    .clue-card h1 {
+      font-family: 'Courier New', Courier, monospace;
+      color: black;
+      margin-top: 10px;
+    }
+
+    .riddle {
+      font-family: 'Papyrus', cursive;
+      font-style: italic;
+      font-size: 1.2em;
+      color: black;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    .footer {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 0.9em;
+      color: black;
+      padding: 5px;
+    }
+
+    /* Corner SVGs */
+    .treasure-icon {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .top-left {
+      top: 10px;
+      left: 10px;
+      transform: rotate(0deg);
+    }
+
+    .bottom-right {
+      bottom: 10px;
+      right: 10px;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Define reusable treasure path symbol -->
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="treasure-path" viewBox="0 0 100 100">
+      <!-- Dotted path -->
+      <path d="M10,90 
+               C20,70 40,70 50,50 
+               C60,30 80,30 90,10" 
+            fill="none" 
+            stroke="#000" 
+            stroke-width="4" 
+            stroke-linecap="round"
+            stroke-dasharray="8,8" />
+      <!-- Start and end dots -->
+      <circle cx="10" cy="90" r="4" fill="#000" />
+      <circle cx="90" cy="10" r="4" fill="#000" />
+      <!-- X at end -->
+      <line x1="86" y1="6" x2="94" y2="14" stroke="#000" stroke-width="4" stroke-linecap="round" />
+      <line x1="94" y1="6" x2="86" y2="14" stroke="#000" stroke-width="4" stroke-linecap="round" />
+    </symbol>
+  </svg>
+
+  <!-- Clue Card 1 -->
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      Without me, the play is groundless.
+      With me, the speech is fearless.
+      I am not a floor, yet I hold your weight.
+      Find me where applause is born
+    </p>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      Without me, leaders would stand the same.
+      With me, their words carry farther in fame.
+      I am not a crown, yet I give them height.
+      Look for me where the lights are bright.
+    </p>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      I have no voice, but  
+      I make voices louder.
+      I have no crown, yet I lift people up.
+      Without me, leaders would blend in the crowd.
+      What am I?
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      I hold many, yet I move not.
+      I make one taller, though I add no height.
+      I stay silent, but I give a voice power.
+      Seek where the ground is raised above the rest.
+    </p>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      Stand tall where leaders speak,<br>
+      Voices loud, ideas unique.<br>
+      Look where the host begins the show,<br>
+      Your next clue waits where speeches flow.
+    </p>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+
+   <!-- Clue Card 1 -->
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #2</h1>
+    <p class="riddle">
+      I am a parade without music,
+      A line without marching feet.
+      Here, travelers move from dish to dish,
+      Gathering treasures they do not keep.
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #2</h1>
+    <p class="riddle">
+      I stand long and wide,
+      Carrying treasures of taste.
+      To find your fill,
+      Walk along my side
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #2</h1>
+    <p class="riddle">
+      I am not a shop, but you take what you like.
+      I am not a map, yet you choose your own path.
+      I never move, but people always travel across me.
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #2</h1>
+    <p class="riddle">
+      I am a river of flavors,
+      But you need no boat to cross me.
+      Many hands sail across my surface,
+      Collecting pieces of the journey.
+    </p>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #2</h1>
+    <p class="riddle">
+      I do not cook, yet I hold a feast.
+      I do not eat, yet I am never empty for long.
+      Hungry eyes search along my spine,
+      And plates return heavier than they came.
+    </p>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <!-- Clue card 3 -->
+   <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #3</h1>
+    <p class="riddle">
+      I have no legs to walk,
+      Yet I carry yours with ease.
+      I never sleep, yet I help you rest.
+      Without me, waiting is harder.
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #3</h1>
+    <p class="riddle">
+      I hold kings and beggars the same,
+      Yet I wear no crown.
+      I never travel, yet I take you off your feet.
+      What am I?
+    </p>
+    <br>
+    <br>
+    <br><br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #3</h1>
+    <p class="riddle">
+      Silent companions in rows we stand,
+      Supporting strangers hand in hand.
+      We never speak, we never stray,
+      But many return to us each day.
+    </p>
+    <br>
+    <br><br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #3</h1>
+    <p class="riddle">
+      I cannot walk, yet I have legs.
+      I cannot breathe, yet I take your weight.
+      Find me where tired bodies pause.
+    </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+
+  <div class="clue-card">
+    <!-- Corner decorations -->
+    <svg class="treasure-icon top-left"><use href="#treasure-path" /></svg>
+    <svg class="treasure-icon bottom-right"><use href="#treasure-path" /></svg>
+
+    <h1>Clue #3</h1>
+    <p class="riddle">
+      Without me, feet grow weary.
+      With me, time grows slower.
+      I wait in corners, halls, and rows,
+      A resting place for those who know
+    </p>
+    <br>
+    <br>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+  
+</body>
+</html>

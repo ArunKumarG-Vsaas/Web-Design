@@ -44,11 +44,44 @@ body {
 }
 
 /* Focus effect */
-.cell:focus {
+/* .cell:focus {
   outline: 2px solid #007bff;
-}
+} */
 
 /* Invalid entries highlighted */
-.invalid {
+/* .invalid {
   background-color: #ffdddd !important;
+} */
+
+.puzzle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+ .grid {
+  width: 500px;
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(10, 40px);
+      gap: 4px;
+      background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+      background-color: #fff8dc;
+      border: 3px dashed #8b5e3c;
+      padding: 30px;
+    }
+    .cell-cross {
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      color: #333;
+    }
+    .highlight {
+      background-color: #ffef96;
+      color: #000;
+    }

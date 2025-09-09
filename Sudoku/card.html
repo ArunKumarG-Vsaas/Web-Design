@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treasure Hunt Clue</title>
+  <style>
+    body {
+      background-color: #f4f1e5;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 80px;
+      column-gap: 40px;
+      padding: 40px;
+      font-family: Arial, sans-serif;
+    }
+
+    .clue-card {
+      background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+      background-color: #fff8dc;
+      border: 3px dashed #8b5e3c;
+      padding: 30px;
+      width: 250px;
+      position: relative;
+      text-align: center;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+
+    .clue-card h1 {
+      font-family: 'Courier New', Courier, monospace;
+      color: #5a3e1b;
+      margin-top: 10px;
+    }
+
+    .riddle {
+      font-family: 'Papyrus', cursive;
+      font-style: italic;
+      font-size: 1.1em;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    .footer {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    /* Scissor SVG top-left */
+    .scissors-icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 25px;
+      height: 25px;
+    }
+
+    /* X Mark SVG bottom-right */
+    .xmark-icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 22px;
+      height: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="clue-card">
+    <svg class="scissors-icon"><use href="#scissors" /></svg>
+    <svg class="xmark-icon"><use href="#xmark" /></svg>
+    <h1>Clue #1</h1>
+    <p class="riddle">
+      Stand tall where leaders speak,<br>
+      Voices loud, ideas unique.<br>
+      Look where the host begins the show,<br>
+      Your next clue waits where speeches flow.
+    </p>
+    <div class="footer">Solve the riddle to find your next clue!</div>
+  </div>
+</body>
+</html>
