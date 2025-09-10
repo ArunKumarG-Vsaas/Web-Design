@@ -47,6 +47,10 @@ const puzzle = fullSolution.map(row => {
 });
 
 function renderGrid() {
+  if(sessionStorage.getItem('isSolved')){
+    showClue();
+  }
+
   const grid = document.getElementById("sudokuGrid");
   grid.innerHTML = '';
 
@@ -156,6 +160,7 @@ function checkAnswers() {
 
   // isValid = true
   if (isValid) {
+    sessionStorage.setItem('isSolved' ,true)
     result.textContent = "✅ Correct! Well done.";
     result.style.color = "green";
     showClue();
